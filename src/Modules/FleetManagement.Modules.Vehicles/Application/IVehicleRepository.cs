@@ -10,6 +10,7 @@ namespace FleetManagement.Modules.Vehicles.Application
     public interface IVehicleRepository
     {
         Task<Vehicle?> GetByIdAsync(Guid id);
+        Task<Vehicle?> GetByPlateNumberAsync(string plateNumber);
         Task<IEnumerable<Vehicle>> GetAllAsync();
         Task AddAsync(Vehicle vehicle);
         Task UpdateAsync(Vehicle vehicle);
