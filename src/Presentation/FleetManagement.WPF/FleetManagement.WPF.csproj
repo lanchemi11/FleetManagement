@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modules\FleetManagement.Modules.Vehicles\FleetManagement.Modules.Vehicles.csproj" />
+    <ProjectReference Include="..\..\Modules\FleetManagement.Modules.Drivers\FleetManagement.Modules.Drivers.csproj" />
+    <ProjectReference Include="..\..\Modules\FleetManagement.Modules.Trips\FleetManagement.Modules.Trips.csproj" />
+    <ProjectReference Include="..\..\Modules\FleetManagement.Modules.Maintenance\FleetManagement.Modules.Maintenance.csproj" />
+    <ProjectReference Include="..\..\Modules\FleetManagement.Modules.Notifications\FleetManagement.Modules.Notifications.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+</Project>
