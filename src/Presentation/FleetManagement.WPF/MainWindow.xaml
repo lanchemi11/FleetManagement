@@ -20,6 +20,10 @@
             <TabItem Header="Vožnje" FontSize="14" Padding="15,5">
                 <views:TripsView x:Name="TripsControl"/>
             </TabItem>
+
+            <TabItem Header="Obaveštenja" FontSize="14" Padding="15,5">
+                <views:NotificationsView x:Name="NotificationsControl"/>
+            </TabItem>
         </TabControl>
 
     </Grid>

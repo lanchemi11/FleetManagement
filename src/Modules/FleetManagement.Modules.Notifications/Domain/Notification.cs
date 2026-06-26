@@ -23,11 +23,12 @@ namespace FleetManagement.Modules.Notifications.Domain
         }
 
         [JsonConstructor]
-        public Notification(Guid id, string message, bool isRead)
+        public Notification(Guid id, string message, bool isRead, DateTime createdAt)
         {
             Id = id;
             Message = message;
             IsRead = isRead;
+            CreatedAt = createdAt;
         }
 
         public void MarkAsRead()

@@ -1,0 +1,20 @@
+[
+  {
+    "Message": "Vo\u017Enja sa vozilom BG-121-KG koju je vozio Nina Vicjan je uspe\u0161no zavr\u0161ena. Pre\u0111eno je 8 km.",
+    "IsRead": true,
+    "Id": "e22d1d53-7c12-4e84-ad15-37fac9eb5785",
+    "CreatedAt": "2026-06-26T23:29:25.4133589Z"
+  },
+  {
+    "Message": "Vo\u017Enja sa vozilom CU-003-NS koju je vozio Milan Ristic je uspe\u0161no zavr\u0161ena. Pre\u0111eno je 3 km.",
+    "IsRead": false,
+    "Id": "aa69e20a-4311-4ba3-a46b-458128e67758",
+    "CreatedAt": "2026-06-26T23:35:57.0032858Z"
+  },
+  {
+    "Message": "Vo\u017Enja sa vozilom BG-123-CU koju je vozio Novi Vozac je uspe\u0161no zavr\u0161ena. Pre\u0111eno je 10 km.",
+    "IsRead": true,
+    "Id": "dba1ddc0-f1e1-42d7-8ce2-f03f5440b924",
+    "CreatedAt": "2026-06-26T23:39:33.5259078Z"
+  }
+]

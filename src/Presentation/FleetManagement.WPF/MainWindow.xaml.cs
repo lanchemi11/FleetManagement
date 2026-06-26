@@ -17,12 +17,17 @@ namespace FleetManagement.WPF;
 /// </summary>
 public partial class MainWindow : Window
 {
-    public MainWindow(VehiclesViewModel vehiclesViewModel, DriversViewModel driversViewModel, TripsViewModel tripsViewModel)
+    public MainWindow(
+        VehiclesViewModel vehiclesViewModel,
+        DriversViewModel driversViewModel,
+        TripsViewModel tripsViewModel,
+        NotificationsViewModel notificationsViewModel)
     {
         InitializeComponent();
 
         VehiclesControl.DataContext = vehiclesViewModel;
         DriversControl.DataContext = driversViewModel;
         TripsControl.DataContext = tripsViewModel;
+        NotificationsControl.DataContext = notificationsViewModel;
     }
 }

@@ -8,6 +8,50 @@
     "EndMileage": 1500000,
     "IsCompleted": true,
     "Id": "53b539be-b085-4de8-aa51-74ea07aa4353",
-    "CreatedAt": "2026-06-26T22:57:59.5926415Z"
+    "CreatedAt": "2026-06-26T23:39:33.5166804Z"
+  },
+  {
+    "VehicleId": "01dececc-4ed5-475d-8fb2-52a0d8583c98",
+    "DriverId": "ae147508-d087-4679-a070-5ddeab4d30dc",
+    "StartLocation": "Kragujevac",
+    "EndLocation": "Petrovac",
+    "StartMileage": 100,
+    "EndMileage": 110,
+    "IsCompleted": true,
+    "Id": "1e2dd7df-29f5-41d7-9356-b2d5bf092b7d",
+    "CreatedAt": "2026-06-26T23:39:33.5166853Z"
+  },
+  {
+    "VehicleId": "43dac776-cc0f-4523-ac54-f2db1078b445",
+    "DriverId": "a327d900-bdf0-4c7e-83be-491f08145d56",
+    "StartLocation": "Novi Beograd",
+    "EndLocation": "Dobracina 73",
+    "StartMileage": 10000,
+    "EndMileage": 10008,
+    "IsCompleted": true,
+    "Id": "6e4fff0a-1372-4d76-b5ed-de32ee8ba242",
+    "CreatedAt": "2026-06-26T23:39:33.5166933Z"
+  },
+  {
+    "VehicleId": "253d6d5e-891e-4cf9-8f46-37d0fb68090f",
+    "DriverId": "4d5086a1-550e-41e2-8255-278ed6952ad2",
+    "StartLocation": "Dobracina 73",
+    "EndLocation": "Dusana Vukasovica 63",
+    "StartMileage": 1500000,
+    "EndMileage": 1500003,
+    "IsCompleted": true,
+    "Id": "4ee65225-2362-44be-b771-687630537d8d",
+    "CreatedAt": "2026-06-26T23:39:33.5166957Z"
+  },
+  {
+    "VehicleId": "01dececc-4ed5-475d-8fb2-52a0d8583c98",
+    "DriverId": "ae147508-d087-4679-a070-5ddeab4d30dc",
+    "StartLocation": "Cu",
+    "EndLocation": "Pn",
+    "StartMileage": 110,
+    "EndMileage": 120,
+    "IsCompleted": true,
+    "Id": "cab8649b-6a19-4462-86ec-bb473e652d06",
+    "CreatedAt": "2026-06-26T23:39:33.5135672Z"
   }
 ]

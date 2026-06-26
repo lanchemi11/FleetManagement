@@ -1,5 +1,7 @@
 ﻿using FleetManagement.Modules.Drivers.Application;
 using FleetManagement.Modules.Drivers.Infrastructure;
+using FleetManagement.Modules.Notifications.Application;
+using FleetManagement.Modules.Notifications.Infrastructure;
 using FleetManagement.Modules.Trips.Application;
 using FleetManagement.Modules.Trips.Infrastructure;
 using FleetManagement.Modules.Vehicles.Application;
@@ -45,6 +47,11 @@ public partial class App : Application
         services.AddTransient<StartTripUseCase>();
         services.AddTransient<CompleteTripUseCase>();
         services.AddTransient<TripsViewModel>();
+
+        services.AddSingleton<INotificationRepository, JsonNotificationRepository>();
+        services.AddTransient<NotificationsViewModel>();
+
+        services.AddTransient<IEventHandler<TripCompletedEvent>, TripCompletedEventHandler>();
 
         services.AddTransient<MainWindow>();
     }
