@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\SharedKernel\FleetManagement.SharedKernel\FleetManagement.SharedKernel.csproj" />
+    <ProjectReference Include="..\FleetManagement.Modules.Vehicles\FleetManagement.Modules.Vehicles.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
