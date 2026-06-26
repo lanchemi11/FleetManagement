@@ -6,6 +6,15 @@
     "CurrentMileage": 1500000,
     "Status": 0,
     "Id": "253d6d5e-891e-4cf9-8f46-37d0fb68090f",
-    "CreatedAt": "2026-06-26T17:05:11.2775153Z"
+    "CreatedAt": "2026-06-26T22:58:57.5250082Z"
+  },
+  {
+    "Make": "Mecredes Benz",
+    "Model": "C Class",
+    "PlateNumber": "BG-123-CU",
+    "CurrentMileage": 100,
+    "Status": 0,
+    "Id": "01dececc-4ed5-475d-8fb2-52a0d8583c98",
+    "CreatedAt": "2026-06-26T22:58:57.5239596Z"
   }
 ]

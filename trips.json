@@ -1,0 +1,13 @@
+[
+  {
+    "VehicleId": "253d6d5e-891e-4cf9-8f46-37d0fb68090f",
+    "DriverId": "a327d900-bdf0-4c7e-83be-491f08145d56",
+    "StartLocation": "Beograd",
+    "EndLocation": "Cuprija",
+    "StartMileage": 1500000,
+    "EndMileage": 1500000,
+    "IsCompleted": true,
+    "Id": "53b539be-b085-4de8-aa51-74ea07aa4353",
+    "CreatedAt": "2026-06-26T22:57:59.5926415Z"
+  }
+]

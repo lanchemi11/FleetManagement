@@ -1,7 +1,10 @@
 ﻿using FleetManagement.Modules.Drivers.Application;
 using FleetManagement.Modules.Drivers.Infrastructure;
+using FleetManagement.Modules.Trips.Application;
+using FleetManagement.Modules.Trips.Infrastructure;
 using FleetManagement.Modules.Vehicles.Application;
 using FleetManagement.Modules.Vehicles.Infrastructure;
+using FleetManagement.SharedKernel.Events;
 using FleetManagement.WPF.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;
@@ -28,6 +31,8 @@ public partial class App : Application
 
     private void ConfigureServices(IServiceCollection services)
     {
+        services.AddSingleton<IEventBus, InMemoryEventBus>();
+
         services.AddSingleton<IVehicleRepository, JsonVehicleRepository>();
         services.AddTransient<RegisterVehicleUseCase>();
         services.AddTransient<VehiclesViewModel>();
@@ -35,6 +40,11 @@ public partial class App : Application
         services.AddSingleton<IDriverRepository, JsonDriverRepository>();
         services.AddTransient<RegisterDriverUseCase>();
         services.AddTransient<DriversViewModel>();
+
+        services.AddSingleton<ITripRepository, JsonTripRepository>();
+        services.AddTransient<StartTripUseCase>();
+        services.AddTransient<CompleteTripUseCase>();
+        services.AddTransient<TripsViewModel>();
 
         services.AddTransient<MainWindow>();
     }

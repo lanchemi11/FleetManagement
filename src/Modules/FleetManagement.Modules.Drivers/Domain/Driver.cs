@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace FleetManagement.Modules.Drivers.Domain
@@ -13,6 +14,16 @@ namespace FleetManagement.Modules.Drivers.Domain
         public string LastName { get; private set; }
         public string LicenseNumber { get; private set; }
         public DriverStatus Status { get; private set; }
+
+        [JsonConstructor]
+        public Driver(Guid id, string firstName, string lastName, string licenseNumber, DriverStatus status)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            LicenseNumber = licenseNumber;
+            Status = status;
+        }
 
         public Driver(string firstName, string lastName, string licenseNumber)
         {

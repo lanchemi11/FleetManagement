@@ -16,6 +16,11 @@
             <TabItem Header="Vozači" FontSize="14" Padding="15,5">
                 <views:DriversView x:Name="DriversControl"/>
             </TabItem>
+
+            <TabItem Header="Vožnje" FontSize="14" Padding="15,5">
+                <views:TripsView x:Name="TripsControl"/>
+            </TabItem>
         </TabControl>
+
     </Grid>
 </Window>
