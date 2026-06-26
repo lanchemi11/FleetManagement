@@ -1,0 +1,18 @@
+[
+  {
+    "FirstName": "Milan",
+    "LastName": "Ristic",
+    "LicenseNumber": "1234",
+    "Status": 0,
+    "Id": "4d5086a1-550e-41e2-8255-278ed6952ad2",
+    "CreatedAt": "2026-06-26T17:05:24.6591678Z"
+  },
+  {
+    "FirstName": "Nina",
+    "LastName": "Vicjan",
+    "LicenseNumber": "12346",
+    "Status": 0,
+    "Id": "a327d900-bdf0-4c7e-83be-491f08145d56",
+    "CreatedAt": "2026-06-26T17:05:24.6579707Z"
+  }
+]

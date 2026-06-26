@@ -6,8 +6,16 @@
         xmlns:local="clr-namespace:FleetManagement.WPF"
         xmlns:views="clr-namespace:FleetManagement.WPF.Views"
         mc:Ignorable="d"
-        Title="Sistem za upravljanje voznim parkom" Height="500" Width="900" WindowStartupLocation="CenterScreen">
+        Title="Sistem za upravljanje voznim parkom" Height="550" Width="950" WindowStartupLocation="CenterScreen">
     <Grid>
-        <views:VehiclesView x:Name="VehiclesControl"/>
+        <TabControl>
+            <TabItem Header="Vozila" FontSize="14" Padding="15,5">
+                <views:VehiclesView x:Name="VehiclesControl"/>
+            </TabItem>
+
+            <TabItem Header="Vozači" FontSize="14" Padding="15,5">
+                <views:DriversView x:Name="DriversControl"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace FleetManagement.Modules.Vehicles.Domain
@@ -14,6 +15,17 @@ namespace FleetManagement.Modules.Vehicles.Domain
         public string PlateNumber { get; private set; }
         public int CurrentMileage { get; private set; }
         public VehicleStatus Status { get; private set; }
+
+        [JsonConstructor]
+        public Vehicle(Guid id, string make, string model, string plateNumber, int currentMileage, VehicleStatus status)
+        {
+            Id = id;
+            Make = make;
+            Model = model;
+            PlateNumber = plateNumber;
+            CurrentMileage = currentMileage;
+            Status = status;
+        }
 
         public Vehicle(string make, string model, string plateNumber, int initialMileage)
         {

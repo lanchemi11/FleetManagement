@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="FleetManagement.WPF.Views.DriversView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FleetManagement.WPF.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Leva strana: Forma za unos vozača -->
+        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="5" Padding="15" Margin="0,0,10,0" Background="#F9F9F9">
+            <StackPanel>
+                <TextBlock Text="Registracija vozača" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Ime:" Margin="0,5,0,2"/>
+                <TextBox Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" Height="25" VerticalContentAlignment="Center"/>
+
+                <TextBlock Text="Prezime:" Margin="0,10,0,2"/>
+                <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" Height="25" VerticalContentAlignment="Center"/>
+
+                <TextBlock Text="Broj vozačke dozvole:" Margin="0,10,0,2"/>
+                <TextBox Text="{Binding LicenseNumber, UpdateSourceTrigger=PropertyChanged}" Height="25" VerticalContentAlignment="Center"/>
+
+                <Button Content="Sačuvaj Vozača" Command="{Binding RegisterDriverCommand}" 
+                        Height="35" Margin="0,20,0,0" Background="#28A745" Foreground="White" FontWeight="Bold">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="3"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Border>
+
+        <!-- Desna strana: Tabela sa spiskom vozača -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Lista registrovanih vozača" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+            <DataGrid Grid.Row="1" ItemsSource="{Binding DriversList}" AutoGenerateColumns="False" 
+                      IsReadOnly="True" GridLinesVisibility="Horizontal" BorderThickness="1" BorderBrush="#CCCCCC" Background="White">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Ime" Binding="{Binding FirstName}" Width="*"/>
+                    <DataGridTextColumn Header="Prezime" Binding="{Binding LastName}" Width="*"/>
+                    <DataGridTextColumn Header="Broj dozvole" Binding="{Binding LicenseNumber}" Width="150"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="120"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</UserControl>

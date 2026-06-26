@@ -1,4 +1,6 @@
-﻿using FleetManagement.Modules.Vehicles.Application;
+﻿using FleetManagement.Modules.Drivers.Application;
+using FleetManagement.Modules.Drivers.Infrastructure;
+using FleetManagement.Modules.Vehicles.Application;
 using FleetManagement.Modules.Vehicles.Infrastructure;
 using FleetManagement.WPF.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,10 +29,12 @@ public partial class App : Application
     private void ConfigureServices(IServiceCollection services)
     {
         services.AddSingleton<IVehicleRepository, JsonVehicleRepository>();
-
         services.AddTransient<RegisterVehicleUseCase>();
-
         services.AddTransient<VehiclesViewModel>();
+
+        services.AddSingleton<IDriverRepository, JsonDriverRepository>();
+        services.AddTransient<RegisterDriverUseCase>();
+        services.AddTransient<DriversViewModel>();
 
         services.AddTransient<MainWindow>();
     }
