@@ -7,7 +7,7 @@
   },
   {
     "Message": "Vo\u017Enja sa vozilom CU-003-NS koju je vozio Milan Ristic je uspe\u0161no zavr\u0161ena. Pre\u0111eno je 3 km.",
-    "IsRead": false,
+    "IsRead": true,
     "Id": "aa69e20a-4311-4ba3-a46b-458128e67758",
     "CreatedAt": "2026-06-26T23:35:57.0032858Z"
   },
@@ -16,5 +16,11 @@
     "IsRead": true,
     "Id": "dba1ddc0-f1e1-42d7-8ce2-f03f5440b924",
     "CreatedAt": "2026-06-26T23:39:33.5259078Z"
+  },
+  {
+    "Message": "Vo\u017Enja sa vozilom KG-123-NS koju je vozio Pera Peric je uspe\u0161no zavr\u0161ena. Pre\u0111eno je 5 km.",
+    "IsRead": true,
+    "Id": "270b9d6b-fe26-47ea-aba5-8b5d6cfbf1d0",
+    "CreatedAt": "2026-06-27T10:34:54.2379932Z"
   }
 ]
