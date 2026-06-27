@@ -24,6 +24,10 @@
             <TabItem Header="Obaveštenja" FontSize="14" Padding="15,5">
                 <views:NotificationsView x:Name="NotificationsControl"/>
             </TabItem>
+
+            <TabItem Header="Održavanje" FontSize="14" Padding="15,5">
+                <views:MaintenanceView x:Name="MaintenanceControl"/>
+            </TabItem>
         </TabControl>
 
     </Grid>

@@ -21,7 +21,8 @@ public partial class MainWindow : Window
         VehiclesViewModel vehiclesViewModel,
         DriversViewModel driversViewModel,
         TripsViewModel tripsViewModel,
-        NotificationsViewModel notificationsViewModel)
+        NotificationsViewModel notificationsViewModel,
+        MaintenanceViewModel maintenanceViewModel)
     {
         InitializeComponent();
 
@@ -29,5 +30,6 @@ public partial class MainWindow : Window
         DriversControl.DataContext = driversViewModel;
         TripsControl.DataContext = tripsViewModel;
         NotificationsControl.DataContext = notificationsViewModel;
+        MaintenanceControl.DataContext = maintenanceViewModel;
     }
 }

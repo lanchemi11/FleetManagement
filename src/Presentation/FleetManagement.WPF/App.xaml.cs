@@ -1,5 +1,7 @@
 ﻿using FleetManagement.Modules.Drivers.Application;
 using FleetManagement.Modules.Drivers.Infrastructure;
+using FleetManagement.Modules.Maintenance.Application;
+using FleetManagement.Modules.Maintenance.Infrastructure;
 using FleetManagement.Modules.Notifications.Application;
 using FleetManagement.Modules.Notifications.Infrastructure;
 using FleetManagement.Modules.Trips.Application;
@@ -50,8 +52,12 @@ public partial class App : Application
 
         services.AddSingleton<INotificationRepository, JsonNotificationRepository>();
         services.AddTransient<NotificationsViewModel>();
-
         services.AddTransient<IEventHandler<TripCompletedEvent>, TripCompletedEventHandler>();
+
+        services.AddSingleton<IMaintenanceRepository, JsonMaintenanceRepository>();
+        services.AddTransient<RecordMaintenanceUseCase>();
+        services.AddTransient<ReleaseFromMaintenanceUseCase>();
+        services.AddTransient<MaintenanceViewModel>();
 
         services.AddTransient<MainWindow>();
     }

@@ -6,7 +6,7 @@
     "CurrentMileage": 1500003,
     "Status": 0,
     "Id": "253d6d5e-891e-4cf9-8f46-37d0fb68090f",
-    "CreatedAt": "2026-06-26T23:39:33.5181595Z"
+    "CreatedAt": "2026-06-27T00:00:51.9834967Z"
   },
   {
     "Make": "Mecredes Benz",
@@ -15,7 +15,7 @@
     "CurrentMileage": 120,
     "Status": 0,
     "Id": "01dececc-4ed5-475d-8fb2-52a0d8583c98",
-    "CreatedAt": "2026-06-26T23:39:33.5143477Z"
+    "CreatedAt": "2026-06-27T00:00:51.9842095Z"
   },
   {
     "Make": "Toyota",
@@ -24,6 +24,6 @@
     "CurrentMileage": 10008,
     "Status": 0,
     "Id": "43dac776-cc0f-4523-ac54-f2db1078b445",
-    "CreatedAt": "2026-06-26T23:39:33.5181714Z"
+    "CreatedAt": "2026-06-27T00:00:51.9842111Z"
   }
 ]

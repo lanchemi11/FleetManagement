@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="FleetManagement.WPF.Views.MaintenanceView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FleetManagement.WPF.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="850">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="5" Padding="15" Margin="0,0,10,0" Background="#F9F9F9">
+            <StackPanel>
+                <TextBlock Text="Slanje vozila na servis" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Slobodno vozilo:" Margin="0,5,0,2"/>
+                <ComboBox ItemsSource="{Binding AvailableVehicles}" SelectedItem="{Binding SelectedAvailableVehicle}" Height="25" VerticalContentAlignment="Center">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Make}" FontWeight="Bold"/>
+                                <TextBlock Text=" "/>
+                                <TextBlock Text="{Binding Model}"/>
+                                <TextBlock Text=" ("/>
+                                <TextBlock Text="{Binding PlateNumber}"/>
+                                <TextBlock Text=")"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <TextBlock Text="Opis servisa (kvara):" Margin="0,10,0,2"/>
+                <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" Height="50" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+
+                <TextBlock Text="Procenjena cena servisa (RSD):" Margin="0,10,0,2"/>
+                <TextBox Text="{Binding Cost, UpdateSourceTrigger=PropertyChanged}" Height="25" VerticalContentAlignment="Center"/>
+
+                <Button Content="Pošalji na Servis" Command="{Binding SendToMaintenanceCommand}" 
+                        Height="35" Margin="0,20,0,0" Background="#DC3545" Foreground="White" FontWeight="Bold">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="3"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Margin="0,0,0,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Evidencija servisnih zapisa" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+                <DataGrid Grid.Row="1" ItemsSource="{Binding MaintenanceList}" AutoGenerateColumns="False" 
+                          IsReadOnly="True" GridLinesVisibility="Horizontal" BorderThickness="1" BorderBrush="#CCCCCC" Background="White">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Vozilo" Binding="{Binding VehiclePlate, Mode=OneWay}" Width="1.5*"/>
+                        <DataGridTextColumn Header="Opis popravke" Binding="{Binding Description, Mode=OneWay}" Width="2*"/>
+                        <DataGridTextColumn Header="Cena (RSD)" Binding="{Binding Cost, Mode=OneWay, StringFormat={}{0:N2}}" Width="100"/>
+                        <DataGridTextColumn Header="Datum servisa" Binding="{Binding ServiceDate, Mode=OneWay, StringFormat='{}{0:dd.MM.yyyy HH:mm}'}" Width="135"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+            <Border Grid.Row="1" BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="5" Padding="15" Background="#E2F0D9">
+                <StackPanel>
+                    <TextBlock Text="Vraćanje vozila sa servisa u funkciju" FontSize="16" FontWeight="Bold" Foreground="#385723" Margin="0,0,0,10"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,15,0">
+                            <TextBlock Text="Izaberi vozilo koje je na servisu:" FontSize="11" Foreground="#555555"/>
+                            <ComboBox ItemsSource="{Binding VehiclesInMaintenance}" SelectedItem="{Binding SelectedVehicleToRelease}" Height="25" VerticalContentAlignment="Center" Margin="0,3,0,0">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Make}" FontWeight="Bold"/>
+                                            <TextBlock Text=" "/>
+                                            <TextBlock Text="{Binding Model}"/>
+                                            <TextBlock Text=" ("/>
+                                            <TextBlock Text="{Binding PlateNumber}"/>
+                                            <TextBlock Text=")"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <Button Grid.Column="1" Content="Vrati sa Servisa" Command="{Binding ReleaseFromMaintenanceCommand}" 
+                                Width="150" Height="30" VerticalAlignment="Bottom" Background="#28A745" Foreground="White" FontWeight="Bold">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>
