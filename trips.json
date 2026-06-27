@@ -8,7 +8,7 @@
     "EndMileage": 1500000,
     "IsCompleted": true,
     "Id": "53b539be-b085-4de8-aa51-74ea07aa4353",
-    "CreatedAt": "2026-06-26T23:39:33.5166804Z"
+    "CreatedAt": "2026-06-27T10:34:54.2265615Z"
   },
   {
     "VehicleId": "01dececc-4ed5-475d-8fb2-52a0d8583c98",
@@ -19,7 +19,7 @@
     "EndMileage": 110,
     "IsCompleted": true,
     "Id": "1e2dd7df-29f5-41d7-9356-b2d5bf092b7d",
-    "CreatedAt": "2026-06-26T23:39:33.5166853Z"
+    "CreatedAt": "2026-06-27T10:34:54.2265665Z"
   },
   {
     "VehicleId": "43dac776-cc0f-4523-ac54-f2db1078b445",
@@ -30,7 +30,7 @@
     "EndMileage": 10008,
     "IsCompleted": true,
     "Id": "6e4fff0a-1372-4d76-b5ed-de32ee8ba242",
-    "CreatedAt": "2026-06-26T23:39:33.5166933Z"
+    "CreatedAt": "2026-06-27T10:34:54.2265718Z"
   },
   {
     "VehicleId": "253d6d5e-891e-4cf9-8f46-37d0fb68090f",
@@ -41,7 +41,7 @@
     "EndMileage": 1500003,
     "IsCompleted": true,
     "Id": "4ee65225-2362-44be-b771-687630537d8d",
-    "CreatedAt": "2026-06-26T23:39:33.5166957Z"
+    "CreatedAt": "2026-06-27T10:34:54.2265748Z"
   },
   {
     "VehicleId": "01dececc-4ed5-475d-8fb2-52a0d8583c98",
@@ -52,6 +52,17 @@
     "EndMileage": 120,
     "IsCompleted": true,
     "Id": "cab8649b-6a19-4462-86ec-bb473e652d06",
-    "CreatedAt": "2026-06-26T23:39:33.5135672Z"
+    "CreatedAt": "2026-06-27T10:34:54.2265799Z"
+  },
+  {
+    "VehicleId": "e8530f23-8a61-4bf9-8447-1fb579002346",
+    "DriverId": "245e9faf-75f3-46b0-9b71-05aea11dad01",
+    "StartLocation": "Paracin",
+    "EndLocation": "Cuprija",
+    "StartMileage": 10,
+    "EndMileage": 15,
+    "IsCompleted": true,
+    "Id": "dd60ed5f-f550-42fe-9a93-fdcfb936c114",
+    "CreatedAt": "2026-06-27T10:34:54.2220423Z"
   }
 ]

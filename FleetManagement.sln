@@ -29,6 +29,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FleetManagement.Tests", "tests\FleetManagement.Tests\FleetManagement.Tests.csproj", "{F7ABCCF9-1EEB-4989-B1B7-26D93A644D3A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{4FBC698A-D669-4EEC-B685-E881B59C9793}"
+	ProjectSection(SolutionItems) = preProject
+		dotnet.yaml = dotnet.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -151,5 +158,9 @@ Global
 		{6996BBF7-DB31-59BC-C7DD-9A7CCC6138C4} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{AF32FC3A-F886-4C33-86C1-643924E9F8AD} = {6996BBF7-DB31-59BC-C7DD-9A7CCC6138C4}
 		{F7ABCCF9-1EEB-4989-B1B7-26D93A644D3A} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{4FBC698A-D669-4EEC-B685-E881B59C9793} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {194C081B-CAE8-4EF2-995E-40364378005A}
 	EndGlobalSection
 EndGlobal

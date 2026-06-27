@@ -6,5 +6,13 @@
     "ServiceDate": "2026-06-27T00:00:41.4822799Z",
     "Id": "1d2bb4a2-0beb-40e1-972a-cd96779c90c9",
     "CreatedAt": "2026-06-27T00:00:41.4821361Z"
+  },
+  {
+    "VehicleId": "e8530f23-8a61-4bf9-8447-1fb579002346",
+    "Description": "menjac se pokvario",
+    "Cost": 10000,
+    "ServiceDate": "2026-06-27T10:35:33.9209044Z",
+    "Id": "e53afd40-0637-4e79-a38b-02abc25cb1db",
+    "CreatedAt": "2026-06-27T10:35:33.9188559Z"
   }
 ]
